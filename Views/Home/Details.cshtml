@@ -4,34 +4,33 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Подробнее</h1>
 
 <div class="text-center">
-    <div class="col-md-4">
-        <form asp-action="Details">
-            <table class=" table" border="1" style="">
+        <form asp-action="Employee">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.Id)
+                            <label>id</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Name)
+                            <label>Имя</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Surname)
+                            <label>Фамилия</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Phone)
+                            <label>Телефон</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.CompanyId)
+                            <label>Индентификатор компании</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.PassportType)
+                            <label>Тип паспорта</label>
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.PassportNumber)
+                            <label>Номер паспорта</label>
                         </th>
                         <th></th>
                     </tr>
@@ -60,13 +59,13 @@
                                 @Html.DisplayFor(modelItem => modelItem.PassportNumber)
                             </th>
                             <th>
-
+                                <a asp-action="Edit" asp-route-id="@Model.Id">Изменить</a> |
+                                <a asp-action="Delete" asp-route-id="@Model.Id">Удалить</a>
                             </th>
                         </tr>
                 </tbody>
             </table>
         </form>
-    </div>
 </div>
 
 <div>

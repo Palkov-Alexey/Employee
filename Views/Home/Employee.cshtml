@@ -4,7 +4,7 @@
     ViewData["Title"] = "Employee";
 }
 
-<h1>Employee</h1>
+<h1>Сотрудники</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -15,25 +15,25 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Id)
+                        <label>id</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Name)
+                        <label>Имя</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Surname)
+                        <label>Фамилия</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Phone)
+                        <label>Телефон</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.CompanyId)
+                        <label>Индентификатор компании</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.PassportType)
+                        <label>Тип паспорта</label>
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.PassportNumber)
+                        <label>Номер паспорта</label>
                     </th>
                     <th></th>
                 </tr>
@@ -64,9 +64,8 @@
                             @Html.DisplayFor(modelItem => item.PassportNumber)
                         </td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
                         </td>
                     </tr>
                 }
